@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 <meta name="description" content="Elbatech Ltd — solar panels, hybrid inverters and tubular batteries in Alaba International Market, Lagos.">
 <title>Elbatech Ltd | Solar Energy Solutions</title>
 <style>
@@ -60,4 +61,28 @@ footer{background:#091827;color:#bdc9d1;text-align:center;padding:24px;font-size
 <div class="actions"><a class="btn" href="https://wa.me/2348034747995?text=Hello%20Elbatech%20Ltd%2C%20I%20am%20interested%20in%20your%20solar%20products." target="_blank" rel="noopener">Send WhatsApp Message</a><a class="btn green" href="mailto:elbatech518@gmail.com?subject=Solar%20Product%20Enquiry">Send Email</a></div></div></div></div></section>
 </main>
 <footer><strong>ELBATECH LTD</strong><br>FL518, Alaba International Market, Lagos, Nigeria · 08034747995 · elbatech518@gmail.com<br>© 2026 Elbatech Ltd. All rights reserved.</footer>
+
+<!-- Elbatech Ltd AI customer chat -->
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://elbatech100.app.n8n.cloud/webhook/87a055db-3605-4413-bee2-fb760e5e7a17/chat',
+    mode: 'window',
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Hello! Welcome to Elbatech Ltd. 👋',
+      'I can help with solar panels, hybrid inverters, batteries, prices and product enquiries. What would you like to know?'
+    ],
+    i18n: {
+      en: {
+        title: 'Elbatech Ltd Assistant',
+        subtitle: 'Your Trusted Partner in Solar Energy Solutions.',
+        footer: '',
+        getStarted: 'Start a conversation',
+        inputPlaceholder: 'Ask about our products...'
+      }
+    }
+  });
+</script>
 </body></html>
